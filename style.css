@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+width: 100%;
+height: 100%;
+background-color: #6d5d04;
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-direction: column;
+}
+
+.container {
+  height: 65vh;
+  width: 50vw;
+  background-color: rgba(76, 157, 180, 0.8); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  padding: 40px;
+  gap: 30px;
+  border-radius: 50px;
+}
+
+
+.options {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .options li {
+    margin-bottom: 10px;
+  }
+  
+  .options input[type="radio"] {
+    display: none; 
+  }
+  
+  .options label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .options label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  .options input[type="radio"]:checked + label::before {
+    background-color:#007FFF ;
+    border: none;
+  }
+  
+  .options input[type="radio"]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+ .question{
+  margin-bottom: 15px;
+ }
+
+ .nextBtn {
+  background-color: #007FFF;
+  color: white;
+  height: 33px;
+  width: 56px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.Quiz{
+  color: rgb(17, 14, 14);
+  font-size: 45px;
+}
+
+@media (max-width:600px) {
+  .container {
+    min-height: 58vh;
+    width: 92vw;
+    background-color: rgba(245, 245, 245, 0.8); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    padding: 40px;
+    gap: 30px;
+    border-radius: 50px;
+  }
+  .Quiz {
+    color: rgb(22, 19, 19);
+    font-size: 35px;
+  }
+}
+
